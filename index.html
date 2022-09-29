@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>See What You Type</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <h1>See What You Type</h1>
-      <textarea id="input" cols="30" rows="10" oninput="update()"></textarea>
-      <h3>Your Text :</h3>
-      <p id="output">Input Box Is Empty... Start Typing</p>
+        <h1>See What You Type</h1>
+        <textarea id="input" cols="30" rows="10" oninput="update()"></textarea>
+        <h3>Your Text :</h3>
+        <p id="output">Input Box Is Empty... Start Typing</p>
     </div>
-  </body>
-  <script>
-    //code here
-  </script>
+</body>
+<script>
+    //typing area
+    let typeArea = document.getElementById("input");
+    console.log(typeArea);
+
+    //output area
+
+    let outputArea = document.getElementById("output");
+    console.log(outputArea);
+
+    function update() {
+        outputArea.innerText = typeArea.value;
+
+
+    }
+</script>
+
 </html>
